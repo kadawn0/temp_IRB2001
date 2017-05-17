@@ -1,0 +1,27 @@
+REGLA DE ZIEGLER-NICHOLS:
+K*exp(-sT)/(a + s)  -> Función de transferencia
+
+Ti = 4*Td (Gain Ratio, Regla clásica de Ziegler-Nichols)
+Tp por experiencia empírica
+
+*Kp = Td, Ti = Ki, Td = Kd
+
+CPID - T2.txt:
+Frecuencia encoder (tentativa): 200 rpm => 200*1920/60 -> 6.4 Hz
+Kc = 0.5
+Kp = 0.3
+Ki = 
+
+
+TIGHT CONTROL PID:
+
+
+Kp*(0.25*Ti^2*s^2 + Ti*s + 1)/(Ti*s)  -> Función de transferencia
+
+
+Kc (critical value of gain) = 0.5 (por precisión y experiencia pasada)
+Kp = 0.6*Kc = 0.3
+Tc (Período crítico de oscilación en el 1% menor de amplitud o luego del tiempo de
+establecimiento) = 0.005 s
+Ki = 0.5*Tc = 0.0025
+Kd = 0.125*Tc = 0.000625
